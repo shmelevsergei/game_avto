@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+        @apply text-slate-800
+    }
+}
+
+@layer components {
+
+    .input {
+        @apply rounded-md border border-slate-300 bg-white p-2 outline-none placeholder:text-slate-800 focus:border-slate-300 transition-all
+    }
+
+    .btn {
+        @apply flex items-center gap-2 rounded-md px-4 py-2 text-white transition-all
+    }
+}
+
+@layer utilities {
+    .btn-red {
+        @apply bg-rose-900 hover:bg-rose-800
+    }
+
+    .input-form {
+        @apply bg-slate-200 placeholder:text-slate-400 text-slate-900
+    }
+
+    .btn-blue {
+        @apply bg-blue-600 hover:bg-blue-800
+    }
+
+    .btn-blue[type="submit"] {
+        @apply bg-blue-600 hover:bg-blue-800
+    }
+
+    .btn-green[type="submit"] {
+        @apply bg-green-600 hover:bg-green-800
+    }
+}
